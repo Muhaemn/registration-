@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+.start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  border: 2px solid rgb(0, 154, 214);
+  border-radius: 15px;
+  padding: 20px;
+}
+.cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.start button {
+  margin: 10px;
+}
+#btn-start {
+  flex-basis: 50%;
+}
+#btn-display-qr {
+  flex-basis: 50%;
+}
+#btn-add-qr {
+  flex-basis: 50%;
+}
+#btn-edit-qr {
+  flex-basis: 50%;
+}
+#btn-delete-qr {
+  flex-basis: 50%;
+}
+.warpper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  border: 2px solid rgb(0, 154, 214);
+  border-radius: 15px;
+  padding: 20px;
+}
+.show-users {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  border: 2px solid rgb(0, 154, 214);
+  border-radius: 15px;
+  padding: 20px;
+  max-height: 400px;
+  overflow: auto;
+}
+.baner {
+  text-align: center;
+  font-weight: 700;
+}
+header {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+*::selection {
+  background: rgb(0, 154, 214);
+  color: white;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  grid-template-rows: 1fr;
+}
+
+.input {
+  position: relative;
+}
+.icon {
+  cursor: pointer;
+}
+.fas {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  text-align: center;
+  pointer-events: none;
+  color: rgb(0, 154, 214);
+}
+
+.input input {
+  width: 100%;
+  height: 42px;
+  padding: 10px 25px 10px 10px;
+  border: 2px solid rgb(0, 154, 214);
+  border-radius: 10px;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+.input input:focus {
+  outline: none;
+  font-size: 13.5px;
+}
+li,
+p {
+  list-style: none;
+  user-select: text;
+}
+.btn {
+  cursor: pointer;
+  color: rgb(0, 154, 214);
+  background-color: transparent;
+  border: 2px solid rgb(0, 154, 214);
+  border-radius: 50px;
+  padding: 10px 20px;
+  letter-spacing: 1.5px;
+  transition: all 0.3s;
+  font-weight: 800;
+  margin-top: 20px;
+  text-align: center;
+}
+.btn-login {
+  cursor: pointer;
+  color: rgb(0, 154, 214);
+  background-color: transparent;
+  border: 2px solid rgb(0, 154, 214);
+  border-radius: 50px;
+  padding: 10px 20px;
+  letter-spacing: 1.5px;
+  transition: all 0.3s;
+  font-weight: 800;
+  margin-top: 0px;
+  text-align: center;
+}
+.btn:hover,
+.btn:focus,
+.btn-login:hover,
+.btn-login:focus {
+  color: white;
+  background-color: rgb(0, 154, 214);
+}
+#btn-delete-qr:hover,
+#btn-delete-qr:focus {
+  color: white;
+  background-color: red;
+  border-color: red;
+}
+span {
+  text-align: center;
+  font-weight: 400;
+  color: rgb(247, 28, 28);
+  font-size: 14px;
+}
+
+.hidden {
+  pointer-events: none;
+  opacity: 0;
+  z-index: -10;
+}
+p {
+  text-align: center;
+}
+.span {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  color: rgb(0, 154, 214);
+  grid-gap: 0;
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+}
+@media (max-width: 850px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+  .warpper {
+    width: 300px;
+  }
+  input {
+    font-size: 10px;
+    letter-spacing: 0.3px;
+  }
+  .start {
+    width: 250px;
+  }
+  .cont {
+    display: grid;
+    grid: center;
+    grid-template-rows: 1fr;
+  }
+  .img-cont {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    top: 10%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+  }
+  .show-users {
+    max-height: 500px;
+  }
+}
+.qr {
+  font-size: 20px;
+  margin: 5px;
+  font-weight: 700;
+}
+.coreect {
+  color: rgb(80, 168, 202);
+  font-weight: 550;
+}
+.cheaked {
+  color: rgb(25, 255, 25);
+  font-weight: 700;
+  font-size: 16px;
+}
+.btn-back {
+  color: rgb(0, 154, 214);
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  position: relative;
+  bottom: 70px;
+  left: -5px;
+  cursor: pointer;
+}
+.stiky {
+  position: sticky;
+  top: 4px;
+}
+.img-cont {
+  max-width: 700px;
+  height: 200px;
+  margin: -35px auto;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  background-image: url(header.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

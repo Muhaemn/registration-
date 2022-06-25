@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tokouyama Registration</title>
+    <script
+      src="https://kit.fontawesome.com/5954bb3a00.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="renderer.js" defer></script>
+  </head>
+  <body>
+    <div class="img-cont">
+      <div class="img"></div>
+    </div>
+    <div class="warpper hidden" id="add-qr">
+      <header>Add QR code</header>
+      <button class="btn-back" id="add-back">Back</button>
+      <form action="#">
+        <div class="grid">
+          <div class="input">
+            <input type="text" id="name" placeholder="Enter name" required />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="input">
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter  phone number"
+              required
+            />
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="input">
+            <input
+              type="text"
+              id="qr-code"
+              placeholder="Enter QR code"
+              required
+            />
+            <i class="fas fa-qrcode"></i>
+          </div>
+          <button type="submit" class="btn" id="btn">Add QR</button>
+          <span id="alert-add"></span>
+        </div>
+      </form>
+    </div>
+
+    <div class="warpper hidden" id="cheak-qr">
+      <header>Cheak QR code</header>
+      <button class="btn-back" id="cheak-back">Back</button>
+      <form action="#">
+        <div class="grid">
+          <div class="input">
+            <input
+              type="text"
+              id="qr-cheak"
+              placeholder=" Enter QR code"
+              required
+            />
+            <i class="fas fa-qrcode"></i>
+          </div>
+          <div>
+            <p id="qr-cheake" class="qr"></p>
+            <p id="qr-name" class="qr"></p>
+            <p id="qr-phone" class="qr"></p>
+          </div>
+          <span class="span" id="find-qr">Find QR by phone number</span>
+          <button type="submit" class="btn-login" id="btn-cheak">Cheak</button>
+          <span id="alert-login"></span>
+        </div>
+      </form>
+    </div>
+    <div class="warpper hidden" id="find-QR">
+      <header>Find QR</header>
+      <button class="btn-back" id="find-back">Back</button>
+      <form action="#">
+        <div class="grid">
+          <div class="input">
+            <input
+              type="text"
+              id="qr-by-phone"
+              placeholder=" Enter phone number"
+              required
+            />
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div>
+            <p id="phone-name" class="qr"></p>
+            <p id="phone-qr" class="qr"></p>
+          </div>
+          <button type="submit" class="btn-login" id="btn-find">Find QR</button>
+          <span id="alert-qr-by-phone"></span>
+        </div>
+      </form>
+    </div>
+    <div class="warpper hidden" id="change-qr">
+      <header>Change QR code</header>
+      <button class="btn-back" id="change-back">Back</button>
+      <form action="#">
+        <div class="grid">
+          <div class="input">
+            <input
+              type="text"
+              id="phone-change"
+              placeholder="Enter name or phone number"
+              required
+            />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="input">
+            <input
+              type="text"
+              id="qr-change"
+              placeholder="Enter new QR code"
+              required
+            />
+            <i class="fas fa-qrcode"></i>
+          </div>
+          <button type="submit" class="btn-login" id="btn-qr-change">
+            Change
+          </button>
+          <span id="alert-change"></span>
+        </div>
+      </form>
+    </div>
+    <div class="warpper hidden" id="delete-qr">
+      <header>Delete QR code</header>
+      <button class="btn-back" id="delete-back">Back</button>
+      <div class="grid">
+        <form action="#">
+          <div class="grid">
+            <div class="input">
+              <input
+                type="text"
+                id="phone-delete"
+                placeholder="Enter name or phone number"
+                required
+              />
+              <i class="fas fa-user"></i>
+            </div>
+            <button type="submit" class="btn-login" id="btn-qr-delete">
+              Delete User
+            </button>
+          </div>
+        </form>
+        <p class="qr">OR</p>
+        <button class="btn-login" id="btn-qr-delete-all">Delete All</button>
+        <span id="alert-delete"></span>
+      </div>
+    </div>
+    <div class="start" id="start">
+      <header>Wellcome</header>
+      <div class="cont">
+        <button id="btn-start" class="btn">Cheak QR</button>
+        <button id="btn-add-qr" class="btn">Add QR</button>
+        <button id="btn-edit-qr" class="btn">Edit QR</button>
+        <button id="btn-delete-qr" class="btn">Delete QR</button>
+        <button id="btn-display-qr" class="btn">Users</button>
+      </div>
+    </div>
+    <div class="show-users hidden" id="users-display">
+      <button class="btn-back stiky" id="show-back">Back</button>
+      <header>Users</header>
+      <div class="baner">
+        <ol id="dis"></ol>
+      </div>
+    </div>
+  </body>
+</html>
